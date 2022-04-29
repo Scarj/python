@@ -15,5 +15,15 @@ class TestRearrange(unittest.TestCase):
         expected = ""
         self.assertEqual(rearrange_name(testcase), expected, "Empty String")
 
+    def test_double_name(self):
+        testcase = "Hopper, Grace M."
+        expected = "Grace M. Hopper"
+        self.assertEqual(rearrange_name(testcase), expected, "Double name")
+
+    def test_one_name(self):
+        testcase = "Voltaire"
+        expected = "Voltaire"
+        self.assertEqual(rearrange_name(testcase), expected, "One name")
+
 
 unittest.main()
